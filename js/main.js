@@ -124,3 +124,22 @@
     
 })(jQuery);
 
+
+
+const imageModal = document.getElementById('imageModal');
+imageModal.addEventListener('show.bs.modal', function (event) {
+  const button = event.relatedTarget; // Image clicked
+  const src = button.getAttribute('data-src');
+  const modalImage = imageModal.querySelector('#modalImage');
+  modalImage.src = src;
+});
+
+
+var familyModal = document.getElementById('familyModal')
+var modalImg = document.getElementById('familyModalImage')
+
+document.querySelectorAll('.hover-img').forEach(function(img) {
+    img.addEventListener('click', function() {
+        modalImg.src = this.dataset.src;
+    });
+});

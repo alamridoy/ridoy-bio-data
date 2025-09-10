@@ -428,3 +428,45 @@
 .testimonial-carousel .owl-dot.active::after {
     background: var(--primary);
 }
+
+
+
+
+
+
+
+
+
+
+
+.image-hover-wrapper {
+    overflow: hidden;
+    border-radius: 20px;
+    position: relative;
+    cursor: pointer;
+    transition: transform 0.5s ease, box-shadow 0.5s ease;
+}
+
+.hover-img {
+    transition: transform 0.5s ease, filter 0.5s ease;
+}
+
+.image-hover-wrapper:hover .hover-img {
+    transform: scale(1.1) rotate(1deg);
+    box-shadow: 0 20px 40px rgba(0,0,0,0.3);
+    filter: brightness(1.1);
+}
+
+/* Fade-in animation for wow.js */
+.wow.fadeInUp {
+    visibility: hidden;
+}
+.wow.fadeInUp.animated {
+    visibility: visible;
+    animation-name: fadeInUp;
+    animation-duration: 1s;
+}
+@keyframes fadeInUp {
+    0% { opacity: 0; transform: translateY(40px); }
+    100% { opacity: 1; transform: translateY(0); }
+}
